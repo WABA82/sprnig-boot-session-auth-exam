@@ -1,0 +1,42 @@
+#spring.application.name=auth-session-exam
+
+
+spring:
+
+  application:
+    name: auth-session-exam
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth_session_exam
+    username: mydev
+    password: mydev
+    driver-class-name: org.postgresql.Driver
+
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 300000
+      connection-timeout: 20000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    enabled: false
+    locations: classpath:db/migration
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.springframework: INFO
