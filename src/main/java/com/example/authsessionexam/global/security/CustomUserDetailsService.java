@@ -1,6 +1,6 @@
 package com.example.authsessionexam.global.security;
 
-import com.example.authsessionexam.domain.auth.repository.UserRepository;
+import com.example.authsessionexam.domains.auth.repository.AppUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -11,17 +11,13 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    private final AppUserRepository appUserRepository;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-
-        this.userRepository.findByEmail(email)
-
-
-        ;
-
-        return null;
+        return appUserRepository.findByEmail(email)
+                .map(CustomUserDetails::from)
+                .orElseThrow(() -> new UsernameNotFoundException("해당 사용자를 찾을 수 없습니다: " + email));
     }
 
 }
