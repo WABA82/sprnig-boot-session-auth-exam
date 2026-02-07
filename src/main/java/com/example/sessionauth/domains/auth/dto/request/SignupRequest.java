@@ -1,0 +1,21 @@
+package com.example.sessionauth.domains.auth.dto.request;
+
+import com.example.sessionauth.domains.auth.model.AppUser;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public record SignupRequest(
+        @Email
+        @NotBlank
+        String email,
+        @NotBlank
+        String password,
+        @NotBlank
+        String nickname
+) {
+
+    public AppUser toEntity(String encodedPassword) {
+        return AppUser.create(email, encodedPassword, nickname);
+    }
+
+}

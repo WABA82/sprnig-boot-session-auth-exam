@@ -7,7 +7,7 @@ server:
 
 spring:
   application:
-    name: auth-session-exam
+    name: sprnig-boot-session-auth-exam
 
   servlet:
     multipart:
