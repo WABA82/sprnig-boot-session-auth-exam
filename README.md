@@ -74,8 +74,3 @@ config.setAllowedOrigins(Arrays.asList(
 - MySQL 8.0
 - Lombok
 - SpringDoc OpenAPI (Swagger UI)
-
-## 문서
-
-- [아키텍처 가이드](docs/ARCHITECTURE.md)
-- [테스트 전략](docs/TESTING.md)
