@@ -64,13 +64,3 @@ config.setAllowedOrigins(Arrays.asList(
     "https://your-frontend-domain.com"
 ));
 ```
-
-## 기술 스택
-
-- Spring Boot 3.5.x
-- Spring Security
-- Spring Session Data Redis
-- Spring Data JPA
-- MySQL 8.0
-- Lombok
-- SpringDoc OpenAPI (Swagger UI)
