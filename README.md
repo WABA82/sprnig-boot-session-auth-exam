@@ -1,6 +1,18 @@
 # spring-boot-session-auth-exam
 
-Spring Security 기반 Redis 공유 세션(Session) 인증 구현 예제입니다.
+![Java](https://img.shields.io/badge/Java-21-blue?style=flat-square)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.10-green?style=flat-square)
+![MySQL](https://img.shields.io/badge/MySQL-8.4-orange?style=flat-square)
+![Redis](https://img.shields.io/badge/Redis-9.0.1-red?style=flat-square)
+
+인증/인가(Authentication & Authorization)는 애플리케이션 보안에서 가장 핵심적인 요소 중 하나이지만, 실무에서는 이미 구축된 구조를 유지·개선하는 경우가 많아 처음부터 직접 설계하고 구현해볼 기회가 비교적 적습니다.
+
+본 프로젝트는 애플리케이션을 처음부터 끝까지 구성하며 인증/인가 흐름을 깊이 이해하는 것을 목표로, 세션 기반 인증 구조를 직접 설계하고 구현한 예제입니다.
+
+세션 방식은 JWT 기반 인증에 비해 상대적으로 보안성이 높지만, 서버 확장성과 유연성이 떨어진다는 단점이 있습니다.
+이를 보완하기 위해 Redis를 활용한 공유 세션 구조를 적용하여 다중 서버 환경에서도 세션 기반 인증이 가능하도록 구성했습니다.
+
+또한 JWT 방식과 비교했을 때, 세션 기반 인증은 구현 및 설정이 직관적이고 단순하다는 장점이 있어 해당 방식의 실무 활용 가능성까지 함께 고려했습니다.
 
 ## 프로젝트 개요
 
