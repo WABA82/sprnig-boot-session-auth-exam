@@ -1,6 +1,6 @@
-# Session-Based Authentication with Spring Security
+# spring-boot-session-auth-exam
 
-스프링 시큐리티 세션 기반 인증 예제입니다. Redis를 이용한 분산 환경의 공유 세션을 지원합니다.
+Spring Security 기반 Redis 공유 세션(Session) 인증 구현 예제입니다.
 
 ## 프로젝트 개요
 
